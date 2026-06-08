@@ -4,13 +4,8 @@ import { execSync } from 'node:child_process'
 import { nav } from './nav'
 import { sidebar } from './sidebar'
 
-// GitHub Pages 子路径部署：
-// - 仓库页面 https://用户名.github.io/front-guide/ 使用 /front-guide/
-// - 自定义域名或用户名根站点使用 /
-// 也可以在部署环境中设置 VITEPRESS_BASE 覆盖这里的默认值。
-const siteBase = process.env.VITEPRESS_BASE ?? '/front-guide/'
-
-// 修改为你的 GitHub 仓库地址，例如：open-user/front-guide。
+const siteUrl = 'https://slang-l.github.io/front-guide/'
+const siteBase = process.env.VITEPRESS_BASE ?? new URL(siteUrl).pathname
 const githubRepo = 'slang-l/front-guide'
 
 function canUseGit() {
@@ -91,6 +86,9 @@ export default defineConfig({
   description: '一份现代前端开发者的系统学习指南',
   lang: 'zh-CN',
   base: siteBase,
+  sitemap: {
+    hostname: siteUrl
+  },
   cleanUrls: true,
   lastUpdated: enableLastUpdated,
 

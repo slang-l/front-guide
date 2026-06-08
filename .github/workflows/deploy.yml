@@ -17,6 +17,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      VITEPRESS_BASE: /front-guide/
 
     steps:
       - name: Checkout
@@ -34,7 +36,7 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build with VitePress
         run: npm run docs:build
