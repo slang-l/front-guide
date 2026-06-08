@@ -11,7 +11,7 @@ import { sidebar } from './sidebar'
 const siteBase = process.env.VITEPRESS_BASE ?? '/front-guide/'
 
 // 修改为你的 GitHub 仓库地址，例如：open-user/front-guide。
-const githubRepo = 'your-name/front-guide'
+const githubRepo = 'slang-l/front-guide'
 
 function canUseGit() {
   try {
@@ -102,7 +102,7 @@ export default defineConfig({
 
   themeConfig: {
     ...(teekConfig.themeConfig ?? {}),
-    logo: '/logo.svg',
+    logo: `${siteBase}logo.svg`,
     nav,
     sidebar,
 
