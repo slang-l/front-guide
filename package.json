@@ -1,0 +1,21 @@
+{
+  "name": "front-guide",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "一份现代前端开发者的系统学习指南",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vitepress": "^1.6.4",
+    "vitepress-theme-teek": "^1.5.7",
+    "vue": "^3.5.16"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

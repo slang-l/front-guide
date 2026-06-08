@@ -1,0 +1,19 @@
+import { ssrRenderAttrs } from "vue/server-renderer";
+import { useSSRContext } from "vue";
+import { _ as _export_sfc } from "./plugin-vue_export-helper.1tPrXgE0.js";
+const __pageData = JSON.parse('{"title":"后端模块","description":"Java、Spring、Spring Boot 等后端开发知识模块的学习入口","frontmatter":{"title":"后端模块","description":"Java、Spring、Spring Boot 等后端开发知识模块的学习入口","outline":"deep"},"headers":[],"relativePath":"backend/index.md","filePath":"backend/index.md"}');
+const _sfc_main = { name: "backend/index.md" };
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  _push(`<div${ssrRenderAttrs(_attrs)}><h1 id="后端模块" tabindex="-1">后端模块 <a class="header-anchor" href="#后端模块" aria-label="Permalink to &quot;后端模块&quot;">​</a></h1><p>后端开发关注业务逻辑、数据存储、接口设计、系统稳定性和工程交付。本栏目先围绕 Java、Spring、Spring Boot 建立主线，后续可以继续扩展数据库、缓存、消息队列、微服务和部署运维。</p><h2 id="学习重点" tabindex="-1">学习重点 <a class="header-anchor" href="#学习重点" aria-label="Permalink to &quot;学习重点&quot;">​</a></h2><ul><li>Java：语法基础、面向对象、集合、异常、泛型、并发和 JVM。</li><li>Spring：IoC、AOP、声明式事务、Bean 生命周期和常用扩展点。</li><li>Spring Boot：自动配置、Starter、配置管理、Web 接口、数据访问和项目分层。</li><li>后端工程：接口规范、权限认证、日志监控、异常处理和部署发布。</li></ul><h2 id="推荐顺序" tabindex="-1">推荐顺序 <a class="header-anchor" href="#推荐顺序" aria-label="Permalink to &quot;推荐顺序&quot;">​</a></h2><p>先掌握 Java 基础和常见类库，再理解 Spring 的容器思想，最后进入 Spring Boot 的工程实践。学习框架时不要只背注解，要能说明注解背后的对象创建、依赖注入、代理和自动配置逻辑。</p><h2 id="模块入口" tabindex="-1">模块入口 <a class="header-anchor" href="#模块入口" aria-label="Permalink to &quot;模块入口&quot;">​</a></h2><ul><li><a href="/front-guide/backend/java/">Java</a></li><li><a href="/front-guide/backend/spring/">Spring</a></li><li><a href="/front-guide/backend/spring-boot/">Spring Boot</a></li></ul></div>`);
+}
+const _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("backend/index.md");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+const index = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
+export {
+  __pageData,
+  index as default
+};

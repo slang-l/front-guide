@@ -1,0 +1,313 @@
+:root {
+  --vp-c-brand-1: #2563eb;
+  --vp-c-brand-2: #1d4ed8;
+  --vp-c-brand-3: #60a5fa;
+  --vp-c-brand-soft: rgba(37, 99, 235, 0.12);
+  --fg-c-cyan: #14b8a6;
+  --fg-c-indigo: #4f46e5;
+  --fg-c-card: rgba(255, 255, 255, 0.94);
+  --fg-c-border: rgba(148, 163, 184, 0.22);
+  --fg-c-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+}
+
+.dark {
+  --vp-c-brand-1: #60a5fa;
+  --vp-c-brand-2: #3b82f6;
+  --vp-c-brand-3: #2563eb;
+  --vp-c-brand-soft: rgba(96, 165, 250, 0.16);
+  --fg-c-cyan: #2dd4bf;
+  --fg-c-indigo: #818cf8;
+  --fg-c-card: rgba(15, 23, 42, 0.76);
+  --fg-c-border: rgba(148, 163, 184, 0.2);
+  --fg-c-shadow: 0 14px 32px rgba(0, 0, 0, 0.24);
+}
+
+html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+}
+
+body {
+  letter-spacing: 0;
+}
+
+.fg-home {
+  max-width: 1120px;
+  margin: 18px auto 0;
+  padding: 0 24px 56px;
+}
+
+.fg-section {
+  margin-top: 28px;
+  padding: 28px;
+  border: 1px solid var(--fg-c-border);
+  border-radius: 12px;
+  background: var(--fg-c-card);
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.04);
+}
+
+.fg-section-head {
+  max-width: 720px;
+  margin-bottom: 20px;
+}
+
+.fg-section-head.compact {
+  margin-bottom: 16px;
+}
+
+.fg-section-head h2 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.35;
+}
+
+.fg-section-head p {
+  margin: 8px 0 0;
+  color: var(--vp-c-text-2);
+  line-height: 1.8;
+}
+
+.fg-kicker {
+  display: inline-flex;
+  margin: 0 0 8px !important;
+  padding: 2px 8px;
+  border: 1px solid rgba(20, 184, 166, 0.24);
+  border-radius: 6px;
+  color: var(--fg-c-cyan) !important;
+  background: rgba(20, 184, 166, 0.08);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.fg-link-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.fg-link-card {
+  position: relative;
+  display: flex;
+  min-height: 154px;
+  padding: 18px;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--fg-c-border);
+  border-radius: 10px;
+  color: inherit;
+  background: var(--vp-c-bg);
+  text-decoration: none !important;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.fg-link-card::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  content: "";
+  background: var(--vp-c-brand-1);
+}
+
+.fg-link-card:hover {
+  border-color: rgba(37, 99, 235, 0.42);
+  box-shadow: var(--fg-c-shadow);
+  transform: translateY(-2px);
+}
+
+.fg-link-card span {
+  color: var(--vp-c-text-3);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.fg-link-card strong {
+  margin-top: 12px;
+  color: var(--vp-c-text-1);
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+.fg-link-card em {
+  margin-top: 12px;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.65;
+}
+
+.fg-link-card.accent-cyan::before {
+  background: var(--fg-c-cyan);
+}
+
+.fg-link-card.accent-indigo::before {
+  background: var(--fg-c-indigo);
+}
+
+.fg-link-card.accent-slate::before {
+  background: #64748b;
+}
+
+.fg-two-col {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
+  gap: 28px;
+}
+
+.fg-roadmap {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: roadmap;
+}
+
+.fg-roadmap li {
+  position: relative;
+  min-height: 58px;
+  padding: 0 0 18px 46px;
+  border-left: 1px solid var(--vp-c-divider);
+  counter-increment: roadmap;
+}
+
+.fg-roadmap li:last-child {
+  padding-bottom: 0;
+  border-left-color: transparent;
+}
+
+.fg-roadmap li::before {
+  position: absolute;
+  top: 0;
+  left: -16px;
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border: 1px solid rgba(37, 99, 235, 0.22);
+  border-radius: 10px;
+  color: var(--vp-c-brand-1);
+  background: var(--vp-c-bg);
+  content: counter(roadmap);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.fg-roadmap a,
+.fg-review-list a {
+  color: var(--vp-c-text-1);
+  font-weight: 800;
+  text-decoration: none !important;
+}
+
+.fg-roadmap span {
+  display: block;
+  margin-top: 4px;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.fg-review-list {
+  display: grid;
+  gap: 10px;
+}
+
+.fg-review-list a {
+  display: flex;
+  padding: 14px 16px;
+  flex-direction: column;
+  border: 1px solid var(--fg-c-border);
+  border-radius: 10px;
+  background: var(--vp-c-bg);
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.fg-review-list a:hover {
+  border-color: rgba(20, 184, 166, 0.38);
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+  transform: translateX(2px);
+}
+
+.fg-review-list span {
+  margin-top: 4px;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+.fg-footer-entry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-color: rgba(37, 99, 235, 0.22);
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(20, 184, 166, 0.08)),
+    var(--fg-c-card);
+}
+
+.fg-footer-entry h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.fg-footer-entry p:not(.fg-kicker) {
+  margin: 8px 0 0;
+  color: var(--vp-c-text-2);
+}
+
+.fg-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.fg-actions a {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px;
+  border: 1px solid rgba(37, 99, 235, 0.24);
+  border-radius: 8px;
+  color: var(--vp-c-brand-1);
+  background: var(--vp-c-bg);
+  font-weight: 800;
+  text-decoration: none !important;
+}
+
+@media (max-width: 960px) {
+  .fg-link-grid,
+  .fg-two-col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fg-footer-entry {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .fg-home {
+    padding: 0 16px 40px;
+  }
+
+  .fg-section {
+    padding: 20px;
+  }
+
+  .fg-link-grid,
+  .fg-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .fg-link-card {
+    min-height: 132px;
+  }
+}
